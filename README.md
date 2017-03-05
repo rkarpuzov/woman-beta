@@ -34,7 +34,7 @@ $ crontab -e
 On new line add similar line:
 
 0 8 8 3 * woman reminder
-# every 8:00 8th March, or one day before: 0 8 7 3 * woman reminder
+####### every 8:00 8th March, or one day before: 0 8 7 3 * woman reminder
 You will receive email (regarding your installtions and rules) contains reminder message
 
 Source code
