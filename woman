@@ -1,0 +1,34 @@
+#!/bin/bash
+
+bashcmd () {
+echo "--<--{@ Happy Woman's Day @}-->--"   
+}
+
+checkdate () {
+ethmarch="03-08"
+cdate=`date "+%m-%d"`
+if [ $cdate == $ethmarch ]; then bashcmd; fi
+}
+
+reminder () {
+if [ -f $HOME/.woman ]; then
+echo Do not forget:
+cat $HOME/.woman
+echo "--<--{@"
+else echo file not exist. Use add2reminder first
+fi
+}
+
+add2reminder () {
+
+echo $1 >> $HOME/.woman
+
+}
+
+case $1 in 
+     bash) bashcmd;;
+     checkdate) checkdate;;
+     reminder) reminder;;
+     add2reminder) add2reminder $2;;
+esac
+
